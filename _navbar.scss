@@ -1,0 +1,93 @@
+@import "variables";
+
+@mixin contact-button__style {
+  background-color: map-get($map: $colors, $key: primaryColor);
+  height: 30px;
+  padding: 0 1.5625rem;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+    border: 2px solid map-get($map: $colors, $key: primaryColor);
+    a {
+      color: white;
+    }
+  }
+}
+
+.main-nav {
+  background: black;
+  height: 3.125rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  justify-self: center;
+  padding-left: 15px;
+  z-index: 3;
+  top: 0;
+
+  .logo {
+    // background-color: darkmagenta;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+
+    .vector {
+      width: 1.1rem;
+      height: 1.1rem;
+      border: 10px solid map-get($map: $colors, $key: primaryColor);
+      border-radius: 100px;
+    }
+    h2 {
+      // background-color: #66d3d5;
+      margin-left: 0.625rem;
+      color: white;
+    }
+  }
+
+  .nav-bar__elements {
+    // background-color: blue;
+    height: 100%;
+    margin-left: 1.875rem;
+    // z-index: 5;
+    ul {
+      padding: 0;
+      margin: 0;
+      // background-color: cornflowerblue;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+
+      li {
+        padding: 0 0.625rem;
+        font-size: 0.8rem;
+        margin: 0;
+        color: white;
+        margin-top: 5px;
+        a {
+          text-decoration: none;
+          color: white;
+          &:hover {
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-button {
+    position: absolute;
+    right: 40px;
+    @include contact-button__style();
+  }
+}

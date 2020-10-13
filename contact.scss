@@ -1,0 +1,68 @@
+@import "navbar";
+
+html body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.contact-splash {
+  background: linear-gradient(to top, rgba(15, 15, 12, 50), transparent),
+    url(./images/emile-perron-xrVDYZRGdw4-unsplash.jpg) center / cover no-repeat
+      fixed border-box;
+  height: 400px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  h1 {
+    font-size: 4rem;
+    margin: 20px;
+  }
+  p {
+    padding: 0 350px;
+    margin: 0;
+  }
+}
+
+.contact-section {
+  height: 700px;
+  // background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    // background-color: green;
+    width: 50%;
+    // height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // text-align: center;
+    // align-items: center;
+
+    label {
+      margin: 5px;
+    }
+    input {
+      margin: 10px;
+      padding: 10px;
+      background-color: rgb(241, 234, 234);
+    }
+    #message {
+      height: 200px;
+    }
+
+    button {
+      @include contact-button__style();
+      color: black;
+      // width: 10%;
+    }
+  }
+}
