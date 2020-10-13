@@ -1,5 +1,5 @@
 @import "variables";
-
+@import "footer";
 @mixin contact-button__style {
   background-color: map-get($map: $colors, $key: primaryColor);
   height: 30px;
